@@ -17,7 +17,7 @@ spec:
             runAsNonRoot: true
           containers:
           - name: {{ .Chart.Name }}
-            image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+            image: "{{ .Values.image.repository }}"
             imagePullPolicy: {{ .Values.image.pullPolicy }}
             {{- with .Values.cronJob.securityContext }}
             securityContext: {{- toYaml . | nindent 14 }}
