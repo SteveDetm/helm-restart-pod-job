@@ -4,7 +4,7 @@
 
 image:
   # -- This sets the container image name and location to pull from.
-  repository: ghcr.io/stevedetm/restart-pod-job # @schema pattern: ^[a-z0-9./-]+$
+  repository: ghcr.io/stevedetm/restart-pod-job:1.0.0 # @schema pattern: ^[a-z0-9./-]+$
   # -- This sets the pull policy for images.
   pullPolicy: IfNotPresent # @schema enum: [IfNotPresent, Always, Never]
 
