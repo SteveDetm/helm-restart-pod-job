@@ -23,7 +23,7 @@ This Helm chart will deploy a CronJob to restart pods. It will use a specific ti
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` | This sets the pull policy for images. |
 | image.repository | string | `"ghcr.io/stevedetm/restart-pod-job"` | This sets the container image name and location to pull from. |
-| image.version | string | `"1.0.0"` |  |
+| image.version | string | `"1.2.0"` |  |
 | nameOverride | string | `""` | This is to override the chart name. |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials |
