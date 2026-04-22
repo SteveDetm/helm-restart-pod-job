@@ -18,6 +18,8 @@ spec:
           containers:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
+            args:
+            - "-dryrun={{ .Values.cronJob.dryrun }}"
             imagePullPolicy: {{ .Values.image.pullPolicy }}
             {{- with .Values.cronJob.securityContext }}
             securityContext: {{- toYaml . | nindent 14 }}

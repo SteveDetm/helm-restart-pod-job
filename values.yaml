@@ -5,7 +5,7 @@
 image:
   # -- This sets the container image name and location to pull from.
   repository: ghcr.io/stevedetm/restart-pod-job # @schema pattern: ^[a-z0-9./-]+$
-  version: 1.2.0
+  version: 1.3.0
   # -- This sets the pull policy for images.
   pullPolicy: IfNotPresent # @schema enum: [IfNotPresent, Always, Never]
 
@@ -25,6 +25,8 @@ serviceAccount:
   name: ''
 
 cronJob:
+  # If true then no pods will be deleted
+  dryrun: false
   # -- This field specifies the number of successful finished jobs to keep. The default value is 3. Setting this field to 0 will not keep any successful jobs.
   successfulJobsHistoryLimit: 1
   # -- The value of that field follows the Cron syntax:
