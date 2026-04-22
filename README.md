@@ -1,6 +1,6 @@
 # helm-restart-pod-job
 
-![Version: 1.0.4](https://img.shields.io/badge/Version-1.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.4](https://img.shields.io/badge/AppVersion-1.0.4-informational?style=flat-square)
+![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.3.0](https://img.shields.io/badge/AppVersion-1.3.0-informational?style=flat-square)
 
 This Helm chart will deploy a CronJob to restart pods. It will use a specific time-to-live annotation for this matter. For more details follow the origin Project https://github.com/Hamburg-Port-Authority/Restart-Pod-Job.
 
@@ -8,6 +8,7 @@ This Helm chart will deploy a CronJob to restart pods. It will use a specific ti
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| cronJob.dryrun | bool | `false` |  |
 | cronJob.resources.limits.cpu | string | `"100m"` | The amount of CPU is limited to this value. |
 | cronJob.resources.limits.memory | string | `"128Mi"` | The amount of memory is limited to this value. |
 | cronJob.resources.requests.cpu | string | `"20m"` | The minimum amount of CPU that the container is guaranteed. |
@@ -23,7 +24,7 @@ This Helm chart will deploy a CronJob to restart pods. It will use a specific ti
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` | This sets the pull policy for images. |
 | image.repository | string | `"ghcr.io/stevedetm/restart-pod-job"` | This sets the container image name and location to pull from. |
-| image.version | string | `"1.2.0"` |  |
+| image.version | string | `"1.3.0"` |  |
 | nameOverride | string | `""` | This is to override the chart name. |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials |
